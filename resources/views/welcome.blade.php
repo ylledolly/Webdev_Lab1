@@ -3,9 +3,11 @@
 <html>
 <head>
     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/welcome.css') }}">
 </head>
 <body>
     <h1>Welcome to the Homepage</h1>
     <p>Hi, I'm Karylle Dollesin. Join me to dive and learn about Laravel.</p>
 </body>
 </html>
+
