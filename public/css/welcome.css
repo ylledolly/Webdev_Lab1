@@ -1,20 +1,400 @@
 /* public/css/welcome.css */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+:root {
+    --main-color: #FEA000;
+  }
+  
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: #1A1A1A;
+}
+/*.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 15%;
+    background: transparent;
+    transition: all ease 0.45s;
+}*/
+section{
+    width: 100%;
+    position: relative;
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2vw 4vw;
+    background: #1A1A1A;
+    z-index: 1000;
+}
+.logo{
+    position: relative;
+    margin-top: -20px; 
+    margin-bottom: -20px;
+    margin-left: 20px;
+    color: white;
+    font-size: 1.77vw;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+.logo span{
+    color: #FEA000;
 }
 
-h1 {
-    text-align: center;
-    color: #007BFF;
-    margin-top: 50px;
+.mainmenu{
+    display: flex;
+    margin: auto 0;
+}
+.mainmenu li{
+    list-style: none;
+    margin: 0 1.9vw;
+    transition: all ease .50s;
+}
+.mainmenu li a{
+    display: block;
+    color: #ECEBD6;
+    font-size: 1vw;
+    letter-spacing: 1px;
+    text-decoration: none;
 }
 
-p {
-    text-align: center;
-    font-size: 18px;
+.mainmenu a.active{
+    color: #FEA000;
+    text-shadow: 3px 3px 20px var(--main-color);
+}
+.mainmenu li:hover a{
+    color: #FEA000;
+    text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px #1A1A1A;
+}
+.section{
+    padding: 0 15%;
+}
+.home{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 70px 10% 0;
+}
+.home .container {
+    display: flex;
+    flex-direction: column;
+}
+.home-container{
+    /*width: 50%;
+    padding-left: 10rem;
+    padding-top: 5rem;*/
+    max-width: 600px;
+}
+.home-container h1{
+    margin: 23px 0;
+    font-size: 5vw;
+    font-weight: 900;
+    line-height: 5vw;
+    color: white;
+    letter-spacing: 3px;
+    /*text-shadow: 4px 3px 0px rgba(231, 224, 224, 0.781);*/  
+}
+.home-container h2{
+    color: white;
+}
+.animated-text span{
+    position: relative;
+}
+.animated-text span::before{
+    content: " Karylle";
+    color: #FEA000;
+    animation: words 28s infinite;
+}
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px);
+    height: 100%;
+    background-color: #1A1A1A;
+    border-left: 3px solid #FEA000;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 3px solid #ECEBD6;
+    }
+}
+@keyframes words{
+    0%,20%{
+        content: " Karylle";
+    }
+}
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 10px);
+    }
+}
+
+.home-container p{
+    font-size: 1rem;
+    font-weight: 400;
+    color:  #ECEBD6;
+    margin-top: 30px;
+    line-height: 20px;
+    mask-border: 50px;
+}
+.home-container .btn{
+    display: inline-block;
+    color: #1A1A1A;
+    background: var(--main-color);
+    margin-top: 1vw;
+    font-size: 1.2vw;
+    font-weight: 400;
+    text-decoration: none;
+    border: 2px solid var(--main-color);
+    padding: 10px 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    transition: all 0.6s ease-in-out;
+    border-radius: 5px;
+}
+.home-container .btn:hover{
+    transform: translateY(-5px);
+    background: transparent;
+    color: #FEA000;
+}
+
+.image_container img{
+    /*width: 100%;
+    height: 100%;
+    object-fit: contain;*/
+    max-width: 450px;
+    border: 2px solid #FEA000;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 25px #FEA000;
+    transition: transform 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.image_container:hover{
+    cursor: pointer;
+    transform: translateY(-10px) scale(1.05);
+}
+.icon{
+    display: flex;
+}
+.icon a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #FEA000;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #FEA000;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 25px 15px 0px;
+    transform: .5s ease;
+}
+.icon a:hover{
+    background: #FEA000;
+    color: #1A1A1A;
+    box-shadow: 0 0 20px #FEA000;
+}
+input{
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+}
+.navbar label{
+    display: none;
+}
+#rocket-container {
+    position: fixed;
+    bottom: 20px;
+    display: none;
+    animation: rocketUp 4s ease-in-out;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#rocket {
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/rocket.png"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*transition: transform 0.5s ease-in-out;*/
+}
+.smoke {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: smokeAnimation 3s linear infinite;
+}
+
+#smoke1 {
+    top: 60px;
+    left: 15px;
+}
+
+#smoke2 {
+    top: 70px;
+    left: 35px;
+}
+@keyframes rocketUp {
+    0% {
+        transform: translateY(0) translateX(-50%);
+    }
+    100% {
+        transform: translateY(-1000px) translateX(-50%);
+    }
+}
+@keyframes smokeAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-100px) scale(1.5);
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .body{
+        overflow: auto;
+    }
+    .logo {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+        margin-top: 2px; /* Adjust margin top for smaller screens */
+        margin-bottom: 2px; /* Adjust margin bottom for smaller screens */
+    }
+    .navbar label{
+        display: block;
+        color: #ECEBD6;
+        font-size: 4vw;
+        padding: 1vw 1.5vw;
+        background: #1A1A1A;
+        z-index: 1000;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .logo img {
+        width: 80px; /* Adjust width for smaller screens */
+    }
+
+    .mainmenu{
+        position: fixed;
+        top: 0;
+        right: -40vw;
+        width: 40vw;
+        height: 100%;
+        background: #ECEBD6;
+        padding-top: 15vw;
+        padding-left: 5vw;
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s ease;
+    }
+    .mainmenu li a{
+        color: #1A1A1A;
+        font-size: 4vw;
+        margin: 1.5vw 0;
+    }
+    #check:checked ~ section .navbar .mainmenu{
+        right: 0;
+    }
+    .home{
+        flex-wrap: wrap;
+    }
+    .home-container{
+        width: 100%;
+        padding: 15vw 10vw;
+        z-index: 100%;
+    }
+    .home-container h1{
+        margin-top: -50px;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .home-container p{
+        font-size: 3vw;
+        line-height: 4vw;
+        margin-bottom: 20px;
+    }
+    .home-container .btn{
+        margin-top: 2vw;
+        font-size: 2.5vw;
+    }
+    .home-container .imgbox{
+        width: 100%;
+        height: 50rem;
+    }
+    .image_container{
+        width: 70%;
+        height: auto;
+        margin-top: 35px;
+    }
+    .icon .fa-brands{
+        padding: .1vw;
+    }
+    
+    ::-webkit-scrollbar{
+        width: 12px;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: black;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: #ECEBD6;
+        border-radius: 50px;
+    }
+    .animated-text span::after{
+        height: 50%
+    }
+    .home .container {
+        flex-direction: column-reverse; /* Reverse order on smaller screens */
+    }
+    .image_container{
+        order: 1;
+    }
+    .home-container{
+        order: 2;
+    }
+    .animated-text span::after{
+        width: calc(100% + 120px);
+    }
+    @keyframes typing{
+        10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+            width: 0;
+        }
+        5%,20%,25%,40%,45%,60%,65%,80%,85%{
+            width: calc(100% + 120px);
+        }
+    }
 }

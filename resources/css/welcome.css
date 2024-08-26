@@ -1,21 +1,18 @@
 /* public/css/welcome.css */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
 }
 
-h1 {
-    text-align: center;
-    color: #007BFF;
-    margin-top: 50px;
+:root {
+    --main-color: #FEA000;
+  }
+  
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: #1A1A1A;
 }
-
-p {
-    text-align: center;
-    font-size: 18px;
-}
-
