@@ -14,21 +14,21 @@ body {
 }
 
 .header {
-    display: flex; /* Aligns items horizontally */
-    align-items: center; /* Centers items vertically */
-    justify-content: space-between; /* Adds space between logo and title */
-    padding: 20px; /* Padding around the header */
-    background-color: #333; /* Dark background color */
-    color: white; /* White text color */
-    position: absolute; /* Position header absolutely */
-    width: 100%; /* Ensure the header takes full width */
-    top: 0; /* Aligns to the top of the page */
-    left: 0; /* Aligns to the left of the page */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px; 
+    background-color: #333; 
+    color: white; 
+    position: absolute; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
 }
 
 .logo {
-    font-size: 2em; /* Size of the logo */
-    font-weight: bold; /* Bold text for emphasis */
+    font-size: 2em; 
+    font-weight: bold; 
 }
 
 .logo span{
@@ -42,7 +42,7 @@ body {
     width: 440px;
     height: 440px;
     padding: 30px;
-    margin-top: 80px; /* Adjusts margin to avoid overlap with header */
+    margin-top: 80px; 
 }
 
 .login-header {
@@ -90,11 +90,11 @@ body {
     color: #1a1a1a;
     font-size: 17px;
     font-weight: 600;
-    border: 5px solid #FEA000; /* Outline color and thickness */
+    border: 5px solid #FEA000; 
 }
 
 .submit-btn:hover {
     background-color: #FEA000;
     color: white;
-    border: 2px solid white; /* Outline color and thickness */
+    border: 2px solid white; 
 }
