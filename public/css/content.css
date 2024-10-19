@@ -153,6 +153,7 @@ input{
     color: white;
     font-size: 2.5rem;
     letter-spacing: 2px;
+    
 }
 .portfolioSec .portfoliotext-center span {
     color: #FEA000;
@@ -276,20 +277,6 @@ input{
 .prev:hover, .next:hover {
     color: #555;
 }
-.footer{
-    padding: 22px;
-    background-color: #2e2e2e;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
-.copyright p{
-    color: white;
-    font-size: 15px;
-    font-weight: 400;
-}
-
 
 @media screen and (max-width: 768px) {
     .body{
